@@ -18,5 +18,8 @@ server called "action_page.php".</p>
 
 <script>
   const queryString = window.location.search;
-  console.log(queryString);
+  const urlParams = new URLSearchParams(queryString);
+  const bobaxCode = urlParams.get('bobaxcode')
+
+  console.log(bobaxCode);
 </script>

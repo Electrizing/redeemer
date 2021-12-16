@@ -17,13 +17,10 @@
 
 <script>
   function containsObject(obj, list) {
-    var x;
-    for (x in list) {
-        if (list.hasOwnProperty(x) && list[x] === obj) {
-            return true;
-        }
+    if (myArray.find(x => x.code === obj)) {
+      return true;
     }
-
+    
     return false;
   }
   

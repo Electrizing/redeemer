@@ -31,12 +31,12 @@
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
   const bobaxCode = urlParams.get('bobaxcode')
-
-  console.log(bobaxCode);
   
-  if (containsObject(bobaxCode, bobaxCodes)) {
+  if (bobaxCode) {
+   if (containsObject(bobaxCode, bobaxCodes)) {
     console.log("Correct code")
   } else {
     console.log("Wrong code") 
+  } 
   }
 </script>

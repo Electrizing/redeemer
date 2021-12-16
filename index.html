@@ -17,10 +17,27 @@ server called "action_page.php".</p>
 </html>
 
 <script>
+  function containsObject(obj, list) {
+    var i;
+    for (i = 0; i < list.length; i++) {
+        if (list[i] === obj) {
+            return true;
+        }
+    }
+
+    return false;
+}
+  
   let bobaxCodes = ["LuckoasIsNoob"]
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
   const bobaxCode = urlParams.get('bobaxcode')
 
   console.log(bobaxCode);
+  
+  if containsObject(bobaxCode) {
+    console.log("Correct code")
+  } else {
+    console.log("Wrong code") 
+  }
 </script>

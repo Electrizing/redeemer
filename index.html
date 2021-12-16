@@ -10,7 +10,7 @@
   <input type="submit" value="Submit">
 </form>
 
-<p>Redeem bobax codes!</p>
+<p id="codeText">Redeem bobax codes!</p>
 
 </body>
 </html>
@@ -35,6 +35,7 @@
   if (bobaxCode) {
    if (containsObject(bobaxCode, bobaxCodes)) {
     console.log("Correct code")
+    document.getElementById("codeText").innerHTML = bobaxCode + " is the correct code!";
   } else {
     console.log("Wrong code") 
   } 

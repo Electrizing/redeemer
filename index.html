@@ -16,6 +16,17 @@
 </html>
 
 <script>
+  function containsObject(obj, list) {
+    var x;
+    for (x in list) {
+        if (list.hasOwnProperty(x) && list[x] === obj) {
+            return true;
+        }
+    }
+
+    return false;
+  }
+  
   let bobaxCodes = ["LuckoasIsNoob"]
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
@@ -23,7 +34,7 @@
 
   console.log(bobaxCode);
   
-  if (bobaxCodes.indexOf(bobaxCode) == 5) {
+  if (containsObject(bobaxCode)) {
     console.log("Correct code")
   } else {
     console.log("Wrong code") 
